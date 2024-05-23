@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Yoga Equipment</title>
+    <link rel="stylesheet" type="text/css" href="YogaMat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+
+</head>
+<body>
+
+    <div class="banner-area">
+        <header>
+            <a href="index.html" class="logo">Motion</a>
+
+            <ul class="menu">
+                <li><a href="Product_Cardio.html">Products ▽</a>
+                    <ul>
+                        <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                        <li><a href="Product_Strength.html">Strength Items</a></li>
+                        <li><a href="Product_Yoga.html">Yoga</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <content>
+        <div class="yogamat">
+            <h1>Yoga Mat</h1>
+            <img src="Images/Yoga1.jpg" class="yogamat-img">
+            <img src="Images/Yoga1a.webp" class="yogamat-img">
+            <h1 class="yogamat-title">Yoga Mat</h1>
+        </div>
+        <h2 class="yogamat-price">₱249.00</h2>
+        <div class="highlights">
+            <p class="highlight-divider">_____________________________________________________________</p>
+            <p class="highlight-title">Key Features:</p>
+            <ul class="highlight-list">
+                <li>Lightweight and easy to roll up for convenient transportation and storage.</li>
+                <li>High-quality, eco-friendly, non-toxic materials for a safe and comfortable practice.</li>
+                <li>Waterproof and sweat-resistant, easy to wipe down after use.</li>
+            </ul>
+            <p class="highlight-divider">_____________________________________________________________</p>
+        </div>
+        <div class="banner-text">
+        <a href="#" class="add-to-cart-btn" onclick="addToCart('Yoga Mat', '249.00', 'Images/Yoga1.jpg')">ADD TO CART</a>
+    </div>
+</content>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        var cartItem = {
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl
+        };
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('The product is successfully added to cart');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+}
+
+.logo {
+    text-decoration: none;
+    color: #365cad;
+    font-size: 27px;
+    padding: 14px 29px;
+    width: 20%;
+    float: left;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    display: block;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 10px 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li ul li {
+    width: 180px;
+}
+
+.menu li ul li a {
+    padding: 8px 12px;
+}
+
+.menu li ul li a:hover {
+    background: #f3f3f3;
+}
+
+.content-area {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Heebo', sans-serif;
+}
+
+.description {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.cardio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardio-item {
+    width: 300px;
+    height: 450px;
+    background-color: #609696;
+    padding: 2px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cardio-item:hover {
+    border: 2px solid #759bd9; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px #00ff00;
+}
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    footer p {
+        margin: 10px 0;
+
+    }
+	
+    footer nav ul {
+        list-style-type: none;
+        padding: 0;
+		
+    }
+
+    footer nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    footer nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    footer .social-media a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer .social-media a:hover {
+        text-decoration: underline;
+    }
+
+    footer .social-media i {
+        margin-right: 5px;
+    }
+
+    footer .contact-info p {
+        margin: 5px 0;
+    }
+
+    footer .contact-info a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+
+@media (max-width: 768px) {
+    .cardio-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu li ul {
+        width: 100%;
+        position: static;
+    }
+}

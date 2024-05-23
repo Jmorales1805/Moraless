@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Yoga Equipment</title>
+    <link rel="stylesheet" type="text/css" href="YogaBlocks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+
+</head>
+<body>
+
+    <div class="banner-area">
+        <header>
+            <a href="index.html" class="logo">Motion</a>
+
+            <ul class="menu">
+                <li><a href="Product_Cardio.html">Products ▽</a>
+                    <ul>
+                        <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                        <li><a href="Product_Strength.html">Strength Items</a></li>
+                        <li><a href="Product_Yoga.html">Yoga</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <content>
+        <div class="yogablocks">
+            <h1>Yoga Blocks</h1>
+            <img src="Images/Yoga2.jpg" class="yogablocks-img">
+            <img src="Images/Yoga2a.jpg" class="yogablocks-img">
+            <h1 class="yogablocks-title">Yoga Blocks</h1>
+        </div>
+        <h2 class="yogablocks-price">₱461.00</h2>
+        <div class="highlights">
+            <p class="highlight-divider">___________________________________________________________________________________________________________________________________________________________</p>
+            <p class="highlight-title">Key Features:</p>
+            <ul class="highlight-list">
+                <li>Soft, non-slip surface for a secure grip and comfortable use.</li>
+                <li>Lightweight design for easy portability.</li>
+                <li>Can be used to deepen stretches, improve alignment, and aid in balance.</li>
+            </ul>
+            <p class="highlight-divider">___________________________________________________________________________________________________________________________________________________________</p>
+        </div>
+        <div class="banner-text">
+        <a href="#" class="add-to-cart-btn" onclick="addToCart('Yoga Blocks', '461.00', 'Images/Yoga2.jpg')">ADD TO CART</a>
+    </div>
+</content>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        var cartItem = {
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl
+        };
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('The product is successfully added to cart');
+    }
+</script>
+
+</body>
+</html>

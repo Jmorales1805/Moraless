@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Strength Equipment</title>
+    <link rel="stylesheet" type="text/css" href="Kettlebell.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+
+</head>
+<body>
+
+    <div class="banner-area">
+        <header>
+            <a href="index.html" class="logo">Motion</a>
+
+            <ul class="menu">
+                <li><a href="Product_Cardio.html">Products ▽</a>
+                    <ul>
+                        <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                        <li><a href="Product_Strength.html">Strength Items</a></li>
+                        <li><a href="Product_Yoga.html">Yoga</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <content>
+        <div class="kettlebell">
+            <h1>Kettlebell</h1>
+            <img src="Images/Strength3.webp" class="kettlebell-img">
+            <img src="Images/Strength3a.jpg" class="kettlebell-img">
+            <h1 class="kettlebell-title">Kettlebell</h1>
+        </div>
+        <h2 class="kettlebell-price">₱278.00</h2>
+        <div class="highlights">
+            <p style="color: blue;"> _________________________________________________________________ </p>
+            <p class="highlight-title">Key Features:</p>
+            <ul class="highlight-list">
+                <li>Features a handle for gripping, with a round, flat base for stability.</li>
+                <li>Ideal for building strength, power, and endurance.</li>
+                <li>Typically made from cast iron with a durable, smooth finish.</li>
+                <li>Wide and comfortable handle for easy gripping with one or both hands.</li>
+                <li>Compact and easy to store.</li>
+            </ul>
+            <p style="color: blue;"> _________________________________________________________________ </p>
+        </div>
+        <div class="banner-text">
+        <a href="#" class="add-to-cart-btn" onclick="addToCart('Kettlebell', '278.00', 'Images/Strength3.webp')">ADD TO CART</a>
+    </div>
+</content>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        var cartItem = {
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl
+        };
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('The product is successfully added to cart');
+    }
+</script>
+
+</body>
+</html>

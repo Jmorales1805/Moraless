@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Checkout.css">
+	<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+    <title>Checkout Page</title>
+</head>
+
+<body>
+    <nav class="navbar-area">
+        <ul class="menu">
+            <li><a href="Product_Cardio.html">Products ▽</a>
+                <ul>
+                    <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                    <li><a href="Product_Strength.html">Strength Items</a></li>
+                    <li><a href="Product_Yoga.html">Yoga</a></li>
+                </ul>
+            </li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Checkout.html">Checkout</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+	
+    <header class="header-area">
+        <a href="index.html"> <img src="Images/Logo.png" alt="Motion Logo" class="logo-img"> </a>
+    </header>
+
+    <div class="container">
+        <h2>Checkout</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><strong>Total to Pay:</strong></td>
+                    <td id="total">0.00</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="btn" onclick="confirmOrder()">Confirm Order</button>
+        <button class="btn" onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <div class="payment" id="paymentModal">
+        <h1 class="payTitle">Personal Information</h1>
+        <label>Name and Surname</label>
+        <input type="text" placeholder="Juan Dela Cruz" class="payInput">
+        <label>Phone Number</label>
+        <input type="text" placeholder="+1 234 5678" class="payInput">
+        <label>Address</label>
+        <input type="text" placeholder="Manila, Philippines" class="payInput">
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+            <img src="Images/visa.png" width="40" alt="" class="cardIcon">
+            <img src="Images/master.png" alt="" width="40" class="cardIcon">
+        </div>
+        <input type="password" class="payInput" placeholder="Card Number">
+        <div class="cardInfo">
+            <input type="text" placeholder="mm" class="payInput sm">
+            <input type="text" placeholder="yyyy" class="payInput sm">
+            <input type="text" placeholder="cvv" class="payInput sm">
+        </div>
+        <button class="payButton">Checkout!</button>
+        <span class="close" onclick="closePaymentModal()">X</span>
+    </div>
+
+    <script>
+        window.onload = function() {
+            displayCartItems();
+        };
+
+        function displayCartItems() {
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            var cartTable = document.getElementById('cart-items');
+            var total = 0;
+
+            cartTable.innerHTML = '';
+
+            cartItems.forEach(function(item) {
+                var row = cartTable.insertRow();
+                var productNameCell = row.insertCell(0);
+                var priceCell = row.insertCell(1);
+                var imageCell = row.insertCell(2);
+
+                productNameCell.textContent = item.productName;
+                priceCell.textContent = '₱' + item.price;
+                imageCell.innerHTML = '<img src="' + item.imageUrl + '" alt="' + item.productName + '" style="max-width: 100px; max-height: 100px;">';
+
+                total += parseFloat(item.price);
+            });
+
+            document.getElementById('total').textContent = '₱' + total.toFixed(2);
+        }
+
+        function confirmOrder() {
+    if (confirm("Are you sure you want to confirm the order?")) {
+        document.getElementById('paymentModal').style.display = 'flex';
+        paymentModal.scrollIntoView({behavior: 'smooth', block: 'center'});
+
+        document.querySelector('.payButton').addEventListener('click', function() {
+            alert("Your order has been confirmed!");
+            window.location.href = "ThankYou.html";
+        });
+    }
+}
+		
+		
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cartItems');
+            displayCartItems(); 
+        }
+		
+		
+    </script>
+</body>
+</html>

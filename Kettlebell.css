@@ -1,0 +1,115 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+.logo {
+    text-decoration: none;
+    color: #365cad;
+    font-size: 27px;
+    padding: 14px 29px;
+    width: 20%;
+    float: left;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    display: block;
+}
+
+.menu li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    padding: 10px 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.menu li ul li {
+    width: 180px;
+}
+
+.menu li ul li a {
+    padding: 8px 12px;
+}
+
+.menu li ul li a:hover {
+    background: #f3f3f3;
+}
+
+.kettlebell {
+    text-align: center;
+}
+
+.kettlebell-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.kettlebell-title {
+    margin-top: 10px;
+}
+
+.kettlebell-price {
+    text-align: center;
+}
+
+.highlights {
+    text-align: center;
+}
+
+.highlight-title {
+    font-size: 25px;
+}
+
+.highlight-list {
+    font-size: 19px;
+    list-style-type: none;
+}
+
+.banner-text {
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 17px;
+    padding: 15px 40px;
+    color: black;
+    display: inline-block;
+    margin-top: 5%;
+    text-transform: uppercase;
+    background: white;
+}
+
+.add-to-cart-btn:hover {
+    border-color: black;
+    transition: .8s;
+    color: white;
+    background: #55a7ab;
+}

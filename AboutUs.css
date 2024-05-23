@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #5fd4d0;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 45px;
+  margin: 0;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+  
+
+  
+}
+
+.company-info, .profile {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+
+
+}
+
+.title {
+  background-color: #5fd4d0;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 22px;
+  margin-bottom: 5px;
+  
+}
+
+.description {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  text-align: center;
+}
+
+.profile-img img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 6px solid #5fd4d0;
+}
+
+.profile-text p {
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.banner-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.banner-text a {
+  text-decoration: none;
+  border: 1px solid #fff;
+  font-size: 17px;
+  padding: 15px 40px;
+  color: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  background: #512da8;
+  transition: background 0.8s, color 0.8s;
+}
+
+.banner-text a:hover {
+  background: white;
+  color: #512da8;
+  border-color: #512da8;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+  }
+
+  .company-info, .profile {
+    width: 45%;
+  }
+}

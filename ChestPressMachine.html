@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Strength Equipment</title>
+    <link rel="stylesheet" type="text/css" href="ChestPressMachine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+
+</head>
+<body>
+
+    <div class="banner-area">
+        <header>
+            <a href="index.html" class="logo">Motion</a>
+
+            <ul class="menu">
+                <li><a href="Product_Cardio.html">Products ▽</a>
+                    <ul>
+                        <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                        <li><a href="Product_Strength.html">Strength Items</a></li>
+                        <li><a href="Product_Yoga.html">Yoga</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <content>
+        <div class="chestpressmachine">
+            <h1>Chest Press Machine</h1>
+            <img src="Images/Strength5.jpg" class="chestpress-img">
+            <img src="Images/Strength5a.jpg" class="chestpress-img">
+            <h1 class="chestpress-title">Chest Press Machine</h1>
+        </div>
+        <h2 class="chestpress-price">₱30,999.00</h2>
+        <div class="highlights">
+            <p style="color: blue;"> _________________________________________________________________ </p>
+            <p class="highlight-title">Key Features:</p>
+            <ul class="highlight-list">
+                <li>Includes a locking mechanism or pins to secure the selected weight and prevent accidental dropping of the weights.</li>
+                <li>The main equipment, comprising a seat, backrest, handles or grips, and a weight stack or plates.</li>
+                <li>Ergonomically designed handles provide a comfortable and secure grip during exercise.</li>
+                <li>Primarily targets the chest muscles (pectoralis major and minor), shoulders (deltoids), and triceps.</li>
+                <li>Suitable for individuals of all fitness levels.</li>
+            </ul>
+            <p style="color: blue;"> _________________________________________________________________ </p>
+        </div>
+        <div class="banner-text">
+        <a href="#" class="add-to-cart-btn" onclick="addToCart('Chest Press Machine', '30999.00', 'Images/Strength5.jpg')">ADD TO CART</a>
+    </div>
+</content>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        var cartItem = {
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl
+        };
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('The product is successfully added to cart');
+    }
+</script>
+
+</body>
+</html>

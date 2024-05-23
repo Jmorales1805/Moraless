@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Cardio Equipment</title>
+    <link rel="stylesheet" type="text/css" href="SkiErgometer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/ico" href="Images/LogoForWebTab.ico" />
+
+</head>
+<body>
+
+    <div class="banner-area">
+        <header>
+            <a href="index.html" class="logo">Motion</a>
+
+            <ul class="menu">
+                <li><a href="Product_Cardio.html">Products ▽</a>
+                    <ul>
+                        <li><a href="Product_Cardio.html">Cardio Items</a></li>
+                        <li><a href="Product_Strength.html">Strength Items</a></li>
+                        <li><a href="Product_Yoga.html">Yoga</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <content>
+        <div class="lol">
+            <h1>Ski Ergometer</h1>
+            <img src="Images/Cardio6.png" class="ski-img">
+            <h1 class="ski-title">Ski Ergometer</h1>
+        </div>
+        <h2 class="ski-price">₱66,903.06</h2>
+        <div class="highlights">
+            <p style="color: blue;"> _________________________________________________________________ </p>
+            <p class="highlight-title">Key Features:</p>
+            <ul class="highlight-list">
+                <li>Mimics the motion of cross-country skiing</li>
+                <li>Easy to assemble and store when not in use</li>
+                <li>Ergonomic handles for a comfortable grip</li>
+                <li>Can be used for a variety of workouts, from high-intensity intervals to steady-state cardio</li>
+                <li>Compact design for home or gym use</li>
+            </ul>
+            <p style="color: blue;"> _________________________________________________________________ </p>
+        </div>
+        <div class="banner-text">
+        <a href="#" class="add-to-cart-btn" onclick="addToCart('Ski Ergometer', '66903.06', 'Images/Cardio6.png')">ADD TO CART</a>
+    </div>
+</content>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        var cartItem = {
+            productName: productName,
+            price: price,
+            imageUrl: imageUrl
+        };
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(cartItem);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('The product is successfully added to cart');
+    }
+</script>
+
+</body>
+</html>
